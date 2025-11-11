@@ -1,94 +1,97 @@
-# 中文社交媒体心理情绪分析系统 - 完整结果报告
+# Chinese Social Media Psychological Sentiment Analysis System - Complete Results Report
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![AI](https://img.shields.io/badge/AI-Interpretable%20AI-orange)](https://)
 
-## 📋 执行摘要
+## 📋 Executive Summary
 
-本项目成功实现了基于可解释AI的中文社交媒体文本分析系统，对863条真实中文社交媒体文本进行了全面的心理情绪分析，有效检测了认知扭曲模式、情感倾向和操纵意图。
+This project has successfully implemented an interpretable AI-based Chinese social media text analysis system, conducting comprehensive psychological sentiment analysis on 863 real Chinese social media texts, effectively detecting cognitive distortion patterns, emotional tendencies, and manipulative intentions.
 
-## 🎯 核心成果
+## 🎯 Key Achievements
 
-### 📊 数据概况
-- **总样本数**: 863条文本
-- **平台分布**: 微博(81.1%)、personalization(8.7%)、mental_filtering(7.0%)、other_distortions(3.2%)
-- **情感分布**: 负面(64.5%)、正面(35.5%)
+### 📊 Data Overview
+- **Total Samples**: 863 texts
+- **Platform Distribution**: Weibo (81.1%), personalization (8.7%), mental_filtering (7.0%), other_distortions (3.2%)
+- **Sentiment Distribution**: Negative (64.5%), Positive (35.5%)
 
-### ⚠️ 认知扭曲检测结果
-- **51.4%** 的文本包含至少一种认知扭曲
-- **35.9%** 的文本属于高风险(≥2种扭曲)
-- **最普遍扭曲**: 未分类扭曲(47.7%)、过度概括(24.8%)、标签化(12.5%)
+### ⚠️ Cognitive Distortion Detection Results
+- **51.4%** of texts contain at least one cognitive distortion
+- **35.9%** of texts are high-risk (≥2 distortions)
+- **Most Common Distortions**: Unclassified distortions (47.7%), Overgeneralization (24.8%), Labeling (12.5%)
 
-## 📈 详细分析结果
+## 📈 Detailed Analysis Results
 
-### 特征分数排名（按均值）
-| 特征类型 | 平均分数 | 检测成功率 | 严重程度 |
-|---------|----------|------------|----------|
-| 未分类扭曲 | 0.416 | 47.7% | 🔴 高 |
-| 操纵意图 | 0.389 | 48.2% | 🔴 高 |
-| 正面情感 | 0.270 | 35.2% | 🔴 高 |
-| 标签化扭曲 | 0.211 | 12.5% | 🔴 高 |
-| 过度概括 | 0.174 | 24.8% | 🔴 高 |
-| 灾难化 | 0.106 | 11.8% | 🔴 高 |
-| 心理过滤 | 0.016 | 2.1% | 🟡 中 |
-| 读心术 | 0.002 | 0.2% | 🟢 低 |
+### Feature Score Ranking (by Mean)
+| Feature Type | Average Score | Detection Success Rate | Severity |
+|--------------|---------------|------------------------|----------|
+| Unclassified Distortions | 0.416 | 47.7% | 🔴 High |
+| Manipulation Intent | 0.389 | 48.2% | 🔴 High |
+| Positive Sentiment | 0.270 | 35.2% | 🔴 High |
+| Labeling Distortion | 0.211 | 12.5% | 🔴 High |
+| Overgeneralization | 0.174 | 24.8% | 🔴 High |
+| Catastrophizing | 0.106 | 11.8% | 🔴 High |
+| Mental Filtering | 0.016 | 2.1% | 🟡 Medium |
+| Mind Reading | 0.002 | 0.2% | 🟢 Low |
 
-### 🔗 特征相关性分析
-发现强相关性特征对：
-- **灾难化 ↔ 标签化**: 0.975 (强正相关)
-- **操纵意图 ↔ 正面情感**: 0.793 (强正相关)
-- **操纵意图 ↔ 负面情感**: -0.573 (负相关)
-- **操纵意图 ↔ 过度概括**: -0.546 (负相关)
+### 🔗 Feature Correlation Analysis
+Strong correlation feature pairs discovered:
+- **Catastrophizing ↔ Labeling**: 0.975 (Strong Positive Correlation)
+- **Manipulation Intent ↔ Positive Sentiment**: 0.793 (Strong Positive Correlation)
+- **Manipulation Intent ↔ Negative Sentiment**: -0.573 (Negative Correlation)
+- **Manipulation Intent ↔ Overgeneralization**: -0.546 (Negative Correlation)
 ![image](https://github.com/whossssssss/XAI/blob/main/img/1.png)
-### 🌐 平台特征差异
-- **微博**: 未分类扭曲(0.500)和操纵意图(0.457)最突出
-- **mental_filtering**: 心理过滤特征显著(0.225)
-- **other_distortions**: 操纵意图(0.550)和标签化(0.429)较高
-- **personalization**: 特征表现相对较弱
+
+### 🌐 Platform Feature Differences
+- **Weibo**: Unclassified distortions (0.500) and manipulation intent (0.457) most prominent
+- **Mental Filtering**: Mental filtering features significant (0.225)
+- **Other Distortions**: Manipulation intent (0.550) and labeling (0.429) relatively high
+- **Personalization**: Feature performance relatively weak
 ![image](https://github.com/whossssssss/XAI/blob/main/img/2.png)
-## 🧠 认知扭曲详细分析
 
-### 严重程度排名
-1. **未分类扭曲** (0.416) - 🔴 高风险
-2. **标签化扭曲** (0.211) - 🔴 高风险  
-3. **过度概括** (0.174) - 🔴 高风险
-4. **灾难化** (0.106) - 🔴 高风险
-5. **心理过滤** (0.016) - 🟡 中等风险
-6. **读心术** (0.002) - 🟢 低风险
+## 🧠 Detailed Cognitive Distortion Analysis
 
-### 出现频率排名
-1. **未分类扭曲** (47.7%) - 🔴 常见
-2. **过度概括** (24.8%) - 🟡 一般
-3. **标签化** (12.5%) - 🟡 一般
-4. **灾难化** (11.8%) - 🟡 一般
-5. **心理过滤** (2.1%) - 🟢 少见
-6. **读心术** (0.2%) - 🟢 少见
+### Severity Ranking
+1. **Unclassified Distortions** (0.416) - 🔴 High Risk
+2. **Labeling Distortion** (0.211) - 🔴 High Risk
+3. **Overgeneralization** (0.174) - 🔴 High Risk
+4. **Catastrophizing** (0.106) - 🔴 High Risk
+5. **Mental Filtering** (0.016) - 🟡 Medium Risk
+6. **Mind Reading** (0.002) - 🟢 Low Risk
 
-## ✅ 检测效果评估
+### Frequency Ranking
+1. **Unclassified Distortions** (47.7%) - 🔴 Common
+2. **Overgeneralization** (24.8%) - 🟡 General
+3. **Labeling** (12.5%) - 🟡 General
+4. **Catastrophizing** (11.8%) - 🟡 General
+5. **Mental Filtering** (2.1%) - 🟢 Rare
+6. **Mind Reading** (0.2%) - 🟢 Rare
 
-### 特征检测成功率
-| 效果等级 | 特征数量 | 代表特征 |
-|----------|----------|----------|
-| 🟡 良好 (30-70%) | 3个 | 操纵意图(48.2%)、未分类扭曲(47.7%)、正面情感(35.2%) |
-| 🔴 需改进 (<30%) | 7个 | 负面情感(26.8%)、过度概括(24.8%)等 |
+## ✅ Detection Effectiveness Evaluation
 
-**总体检测效果**: 20.9% (需改进)
+### Feature Detection Success Rate
+| Effectiveness Level | Number of Features | Representative Features |
+|---------------------|-------------------|------------------------|
+| 🟡 Good (30-70%) | 3 | Manipulation Intent (48.2%), Unclassified Distortions (47.7%), Positive Sentiment (35.2%) |
+| 🔴 Needs Improvement (<30%) | 7 | Negative Sentiment (26.8%), Overgeneralization (24.8%), etc. |
 
-### 关键发现
-- **最普遍特征**: 操纵意图 (48.2%样本中存在)
-- **最严重特征**: 操纵意图 (平均强度: 0.3886)
-- **数据质量**: 18.0% (低质量，需要优化特征词典)
+**Overall Detection Effectiveness**: 20.9% (Needs Improvement)
 
-## 📚 技术实现统计
+### Key Findings
+- **Most Common Feature**: Manipulation Intent (present in 48.2% of samples)
+- **Most Severe Feature**: Manipulation Intent (average intensity: 0.3886)
+- **Data Quality**: 18.0% (Low quality, requires feature dictionary optimization)
 
-### n-gram词典规模
-- **总特征数**: 77个针对性n-gram
-- **mental_filtering**: 23个特征
-- **personalization**: 24个特征  
-- **manipulation**: 6个特征
-- **情感特征**: 8个特征(正面4个，负面4个)
-- **其他扭曲**: 16个特征
+## 📚 Technical Implementation Statistics
 
-## 🎯 应用价值
-本系统为心理健康监测、内容审核、投资教育等领域提供了有效的认知扭曲检测工具，通过可解释的AI特征为分析结果提供了透明度和可信度。
+### n-gram Dictionary Scale
+- **Total Features**: 77 targeted n-grams
+- **Mental Filtering**: 23 features
+- **Personalization**: 24 features
+- **Manipulation**: 6 features
+- **Sentiment Features**: 8 features (4 positive, 4 negative)
+- **Other Distortions**: 16 features
+
+## 🎯 Application Value
+
+This system provides an effective cognitive distortion detection tool for mental health monitoring, content moderation, investment education, and other fields, offering transparency and credibility to analysis results through interpretable AI features.
